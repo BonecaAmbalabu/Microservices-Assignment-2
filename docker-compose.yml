@@ -41,6 +41,11 @@ services:
     networks:
       - microservices-net
 
+  course-catalogue:
+    build: ./course-catalogue
+    ports:
+      - "5002:5000"
+
 networks:
   microservices-net:
     driver: bridge

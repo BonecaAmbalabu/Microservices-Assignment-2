@@ -44,3 +44,14 @@ INSERT INTO students (name, email, attendance) VALUES
 ('Michael Scott', 'michael.scott@example.com', '[]'),
 ('Rachel Green', 'rachel.green@example.com', '[]'),
 ('Stephen Thorpe', 'stephen.thorpe@example.com', '[]');
+
+CREATE TABLE IF NOT EXISTS courses (
+    code VARCHAR(10) PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    credits INT NOT NULL
+);
+
+INSERT INTO courses (code, title, credits) VALUES
+('CS101', 'Introduction to Programming', 15),
+('CS201', 'Data Structures', 20),
+('CS301', 'Databases', 20);
