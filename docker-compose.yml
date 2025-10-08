@@ -38,6 +38,7 @@ services:
       CHOKIDAR_USEPOLLING: "true"
     depends_on:
       - student-profile
+      - course-catalogue
     networks:
       - microservices-net
 
@@ -45,6 +46,8 @@ services:
     build: ./course-catalogue
     ports:
       - "5002:5000"
+    networks:
+      - microservices-net
 
 networks:
   microservices-net:
