@@ -49,6 +49,13 @@ services:
     networks:
       - microservices-net
 
+  feedback:
+    build: ./Feedback-Service
+    ports:
+      - "5003:5003"
+    networks:
+      - microservices-net
+
 networks:
   microservices-net:
     driver: bridge
